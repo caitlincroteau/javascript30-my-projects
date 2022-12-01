@@ -75,6 +75,25 @@
       }
     </style>
 
-    <script></script>
+    <script>
+      const inputs = document.querySelectorAll(".controls input");
+      // gives you a node list not an array
+
+      function handleUpdate() {
+        const suffix = this.dataset.sizing || "";
+        //dataset is object with everything after data- custom elements
+
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+        //change variable: select entire document, AKA root, and set properties
+      }
+
+      inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+      inputs.forEach((input) =>
+        input.addEventListener("mousemove", handleUpdate)
+      );
+    </script>
   </body>
 </html>
