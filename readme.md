@@ -8,3 +8,4 @@ Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
 
 - [x] JavaScript Drum Kit - Key events, playing audio, listening for transitionend and animationend events.
 - [x] JS and CSS Clock - created a Christmas version.
+- [x] CSS Variables
